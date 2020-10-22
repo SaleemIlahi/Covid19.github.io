@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+html{    
+  scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-track{
+    background:  #000;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: linear-gradient( #d4ac0d ,  #d35400 );
+}
+
+/* header section */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    box-shadow: 0 2px 38px #000;
+}
+header .logo{
+    display: flex;
+}
+header .logo img{
+    width: 60px;
+    height: 60px;
+}
+header .logo h4{
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+header .navbar{
+    margin: auto 0px;
+}
+header .navbar nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 80px; 
+}
+header .navbar nav ul li a{
+    text-decoration-line: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #000;
+    font-weight: 600;
+}
+header .navbar nav ul li .active{
+    color: #e0501b;
+}
+
+/* landing page section */
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.landing{
+    display: flex;
+    padding: 20px;
+}
+.landing .landing-text{
+    flex-basis: 60%;
+    margin: auto 0;
+    margin-left: 50px;
+}
+.landing .landing-text h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.landing .landing-text h1 span{
+    font-size: 3rem;
+    color: #e0501b;
+}
+.landing .landing-text h4{
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.landing .landing-text a{
+    padding: 10px 20px;
+    text-decoration-line: none;
+    /*background: #e0501b;*/
+    color: #e0501b;
+    text-transform: uppercase;
+    border-radius: 20px;
+    display: inline-block;
+    border: 2px solid #e0501b;
+    position: relative;
+    transition: all 0.6s ease;
+    overflow: hidden;
+}
+.landing .landing-text a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: #e0501b;
+    border-radius: 16px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: translate(-50%);
+}
+/*.landing .landing-text a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #e0501b;
+    border-radius: 0 17px 17px 0;
+    z-index: -1;
+    transition: all 0.6s ease;
+}*/
+.landing .landing-text a:hover{
+    color: #fff;
+}
+.landing .landing-text a:hover::before{
+    width: 100%;
+
+}
+/*.landing .landing-text a:hover::after{
+    width: 50%;
+}*/
+.landing .landing-img{
+    flex-basis: 50%;
+}
+.landing .landing-img img{
+    margin-top: 10px;
+    margin-right: 40px;
+    width: 85%;
+}
+
+.corona-update {
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+}
+.corona-update h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 40px;
+}
+.corona-update  hr{
+    width: 60%;
+    height: 5px;
+    background: #e0501b;
+    border: none;
+    outline: none;
+    margin: 50px auto;
+    border-radius: 4px;
+}
+.corona-update .corona-details{
+    display: flex;
+    justify-content: center;
+}
+.corona-update .corona-details .confirm-details,
+.corona-update .corona-details .deaths-details,
+.corona-update .corona-details .recovered-details{
+    margin: 0px 60px;
+    padding: 40px;
+}
+.corona-update .corona-details .confirm-details img,
+.corona-update .corona-details .deaths-details img,
+.corona-update .corona-details .recovered-details img{
+    width: 120px;
+} 
+.corona-update .corona-details .confirm-details h4,
+.corona-update .corona-details .deaths-details h4,
+.corona-update .corona-details .recovered-details h4{
+    font-size: 1rem;
+    margin-top: 30px;
+    font-weight: 500;
+}
+.corona-update .corona-details .confirm-details span,
+.corona-update .corona-details .deaths-details span,
+.corona-update .corona-details .recovered-details span{
+    font-size: 1.5rem;
+    color: #e0501b;
+}
+.corona-update .corona-details .confirm-details a,
+.corona-update .corona-details .deaths-details a,
+.corona-update .corona-details .recovered-details a{
+    display: block;
+    text-decoration-line: none;
+    border: 2px solid #e0501b;
+    color: #e0501b;
+    padding: 6px 15px;
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+.corona-update .corona-details .confirm-details:hover,
+.corona-update .corona-details .deaths-details:hover,
+.corona-update .corona-details .recovered-details:hover{
+    transform: translateY(-15px);
+}
+
+.safety-info{
+    width: 100%;
+}
+.safety-info h1{
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+.safety-info h1 span{
+    color: #e0501b;
+}
+.safety-info section{
+    display: flex;
+}
+.safety-info section .left-cols{
+    flex-basis: 30%;
+}
+.safety-info section .left-cols img{
+    margin-left: 50px;
+    width: 45%;
+}
+.safety-info section .right-cols{
+    flex-basis: 70%;
+}
+.safety-info section .right-cols ol{
+    margin-top: 70px;
+}
+.safety-info section .right-cols ol li{
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 80px;
+    font-size: 1.3rem;
+}
+.safety-info section .right-cols ol li span{
+    color: #e0501b;
+    margin-right: 20px;
+}
+
+
+.infosection .infoholder{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.infosection .infoholder h1{
+    font-weight: 500;
+}
+.infosection .infoholder h1 span{
+    color: #e0501b;
+}
+.infosection .infocards{
+    height: 450px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+}
+.infosection .infocards .cards{
+    width: 400px;
+    margin: 0 20px;
+    box-shadow: 0 8px 18px #000;
+}
+.infosection .infocards .cards .card-img{
+    background: #f1c40f;
+}
+.infosection .infocards .cards .card-img img{
+    width: 180px;
+    height: 250px;
+    margin-top: -60px;
+    transform: translateX(200px);
+}
+.infosection .infocards .cards .card-img span img{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-left: -150px;
+    margin-bottom: 100px;
+}
+.infosection .infocards .cards .contentcard{
+    margin-top: 40px;
+    background: #fff;
+    padding: 0 40px;
+}
+.infosection .infocards .cards .contentcard h4{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.infosection .infocards .cards .contentcard p{
+    margin-top: 50px;
+}
+.infosection .infocards .cards .contentcard i{
+    margin-top:30px;
+    background: #f1c40f;
+    color: #000;
+    padding: 10px;
+}
+
+.banner{
+    width: 100%;
+    height: 95vh;
+    margin-top: 80px;
+    position: relative;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95vh;
+    background: #f1c40f;
+    clip-path: polygon(50% 70%, 70% 60%, 85% 75%, 100% 65%, 100% 100%, 0 100%, 0 65%, 15% 75%, 30% 60%);
+    z-index: -1;
+}
+.banner .doctor{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.banner .doctor img{
+    height: 95vh;
+}
+.banner .doctor .doctor-thanks img{
+    width: 600px;
+    margin-left: 120px;
+    margin-top: -40px;
+}
+
+footer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #f1c40f;
+}
+footer .footerLeft-cols{
+    flex-basis: 55%;
+    margin: auto 60px;
+}
+footer .footerLeft-cols h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+footer .footerLeft-cols h4{
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+footer .footerLeft-cols .appstore-logo img{
+    width: 20%;
+    cursor: pointer; 
+}
+footer .footerLeft-cols .appstore-logo img:nth-child(2){
+    width: 22%;
+}
+footer .footerRight-cols{
+    flex-basis: 45%;
+}
+footer .footerRight-cols img{
+    margin-top: 100px;
+    margin-right: 30px;
+    width: 600px;
+    transform: translateY(40px);
+}
+
+
